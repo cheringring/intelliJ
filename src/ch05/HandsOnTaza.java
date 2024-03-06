@@ -20,13 +20,12 @@ public class HandsOnTaza {
         // var arrLength = arr.length(); // 총 문자수
 
         Scanner sc = new Scanner(System.in);
-        String input = sc.nextLine();
 
         for (var i = 0; i <= arr.length; i++) {
             System.out.println(arr[i]);
             System.out.println("타자 연습을 시작하겠습니다. 문장을 적어주세요.");
             var startTime = System.currentTimeMillis();
-            System.out.println(input);
+            var input= sc.nextLine();
             var endTime = System.currentTimeMillis(); // 펑션임
             var accuracy = HandsOnTaza.CorrectCalculator(arr[i], input);
             System.out.println("시작시각은 " + startTime + "초,  끝난시각은" + endTime + "초, 정확도는" + accuracy + "입니다.");
@@ -40,6 +39,11 @@ public class HandsOnTaza {
 
         int correctChar = 0;
 
+// Math.min() 함수는 주어진 두 수 중에서 작은 값을 반환하는 함수입니다.
+// 이 함수가 사용된 이유는 배열의 길이와 입력 문자열의 길이 중에서
+// 더 작은 값을 선택하여 루프를 반복하기 위해서입니다.
+// 여기서 for 루프는 두 문자열 중에서 더 짧은 길이를 기준으로 반복되어야 합니다.
+// 그렇지 않으면 배열의 길이나 입력 문자열의 길이 중에서 더 긴 쪽의 인덱스 범위를 벗어나는 경우에 IndexOutOfBoundsException 오류가 발생할 수 있습니다.
         for (int i = 0; i < Math.min(arr.length(), input.length()); i++) {
             if (arr.charAt(i) == input.charAt(i)) correctChar++;
         }
