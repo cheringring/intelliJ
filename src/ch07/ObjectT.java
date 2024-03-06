@@ -27,7 +27,7 @@ public class ObjectT {
         System.out.println(ObjectT.staticVar);
         System.out.println(objectT.instanceVar);
 
-        int localVar = 0; // 함수 블록 내에서 변수 할당. = 지역변수
+        // int localVar = 0; // 함수 블록 내에서 변수 할당. = 지역변수
         // 지역변수는 컴파일러가 초기화 해주지 않기때문에
         // 꼭 초기화 작업이 필요하다.
     }

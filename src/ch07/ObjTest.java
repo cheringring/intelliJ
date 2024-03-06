@@ -23,8 +23,8 @@ public class ObjTest {
 
         // 자식은 부모를 지꺼처럼 쓸 수 있다.
        // 부모에 있는 메소드를 지꺼처럼 쓸 수 있다.
-        myObj.toString();
-        myObj.hashCode();
+        //myObj.toString();
+        // myObj.hashCode();
         // myObj. < 이 쩜 = 마이오브젝트라는 인스턴스를 통해서
         // 그 메모리에 있는 것을 접근함
         // toStrig(); hashCode() < 메소드,펑션일 경우
