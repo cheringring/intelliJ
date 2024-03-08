@@ -6,8 +6,9 @@ public class Phone {
     public String brand;
 
 
-    public void sendMsg(String msg){
-        System.out.println(msg);
+    public void sendMsg(Message msg){
+        System.out.println("send msg"+msg.from+","+msg.to+
+                ","+msg.content);
     }
 
 }
