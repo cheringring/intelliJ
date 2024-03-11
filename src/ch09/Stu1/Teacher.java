@@ -7,6 +7,7 @@ public class Teacher {
     String major;
     Student student;
 
+
     public void setName(String name) {
         this.name = name;
     }
