@@ -23,8 +23,10 @@ public class StudentNumSystem {
             } else System.out.println("정원을 초과하였습니다..");
 
         }
-        return
+        //return 0;
     }
+}
+
 
 
 

@@ -11,18 +11,16 @@ public class Teacher {
     public void setName(String name) {
         this.name = name;
     }
-    public void setMajor(String major){
-        this.major= major;
+
+    public void setMajor(String major) {
+        this.major = major;
 
     }
-
-    public void askQuestion(Student student,String question){
-        this.student=student;
-        student.askQuestion(question);
-    }
-
-    public boolean checkAnswer(){
-        String answer = student.getAnswer();
-        return (answer != null && answer.equalsIgnoreCase("Seoul"));
-    }
+//
 }
+
+  // public boolean checkAnswer(){
+     //  String answer = student.getAnswer();
+       // return (answer != null && answer.equalsIgnoreCase("Seoul"));
+  //  }
+//}
