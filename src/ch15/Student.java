@@ -34,10 +34,10 @@ public class Student {
 
     @Override
     public String toString() {
-        return "Student{" +
-                "name='" + name + '\'' +
-                ", subjects=" + Arrays.toString(subjects) +
-                ", subjectIndex=" + subjectIndex +
-                '}';
+        return "학생: " +
+                "이름:" + name +
+                " " + Arrays.toString(subjects) +
+                ", 과목 인덱스=" + subjectIndex +
+                '\n';
     }
 }

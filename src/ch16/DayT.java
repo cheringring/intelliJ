@@ -44,8 +44,10 @@ public class DayT {
         System.out.println(w.name()); //TUSEDAY
 
 
+
         int weekNum = w.ordinal(); // 인덱스를 리턴해줌.
         System.out.println(weekNum);
+
 
         }
     }
