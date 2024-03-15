@@ -3,7 +3,7 @@ package ch17;
 public class Animal {  // outer class  휴먼에 외부에서 안보임.
     int life;
 
-    private class Human {  // inner class
+    class Human {  // inner class
         int getOuter() {
             life=90;
             return life;
@@ -15,15 +15,19 @@ public class Animal {  // outer class  휴먼에 외부에서 안보임.
     // 휴먼을 숨기고싶어 -> 왜? 애니멀에서만 쓰고싶으니까.
     // 여기서 private를 없애면 패키지 밑에 나오는 클래스 명에 보인다.
 
-    public void method() {
+    public Human method() {
         var human = new Human();
+        return human;
     }
 }
 
 class Main{
     public static void main(String[] args) {
-        Animal.Human.human = new Animal().new Human();
+       // Animal.Human human = new Animal().new Human();
+        Animal animal = new Animal();
+        var human = animal.method();
         System.out.println(human.getOuter());
+
 
     }
 }
