@@ -102,6 +102,10 @@ class CoffeShop {
 
     // 메뉴 가격
     private Map<Menu, Integer> menuPrices;
+//
+//    Integer는 자바에서 제공하는 클래스로, 정수를 감싸는
+//    래퍼 클래스(Wrapper Class)입니다.
+
     // Map은 키와 벨류로 이루어져있음
     // Menu가 key이고 , Integer가 벨류임.
     // 여기에 들어가는 애들은 객체만 가능함. Menu= enum객체
@@ -120,6 +124,15 @@ class CoffeShop {
 
     private Set<Customer> customers;
 
+//    여러 고객 관리의 용이.고객들의 정보를 저장하고 접근할 수 있어야 합니다.
+//    customers라는 Set을 사용하여 이를 관리합니다.
+//    중복 방지: Set은 중복된 요소를 허용하지 않는 자료구조입니다.
+//    따라서 customers 집합에는 같은 고객이 중복해서 포함되지 않습니다.
+//    검색 및 조회: Set은 빠르게 요소를 검색할 수 있는 자료구조입니다.
+//    따라서 고객의 이메일이나 이름 등을 기준으로 고객을 조회하거나 검색할 때 유용합니다.
+//    고객 목록 유지: 커피숍은 고객들의 정보를 유지하고 필요한 경우 조회할 수 있어야 합니다.
+//    customers 집합을 사용하여 고객 목록을 관리하면 이를 손쉽게 할 수 있습니다.
+//
     private int totalSales; // 총 판매금액.
 
 
@@ -172,6 +185,9 @@ class CoffeShop {
         // keySet() 의 타입은 Set이다 = 중복을 허용하지않음.
         // 키셋을 통해 커스터머 오더의 키값을 받아올 수 있다.
         // == Customer
+
+        // 위에  customerOrders.put(customer, amount); 의 key customer
+
         for (var customer : customerOrders.keySet()) {
             System.out.println(customer.getName() + "주문 금액: "
                     + customerOrders.get(customer)); // < 해당고객이 주문한 가격
@@ -200,6 +216,7 @@ class CoffeShop {
 
 // 샵 매니지먼트
 class ShopMgr {
+
     Set<CoffeShop> shops;
 
     public ShopMgr() {
@@ -214,6 +231,9 @@ class ShopMgr {
         return shops;
     }
 }
+// 순서대로 쭉 따라오면 이해가 간다.
+
+
     class Main {
         public static void main(String[] args) {
 
@@ -235,6 +255,7 @@ class ShopMgr {
 
             CoffeShop findshop = null;
 
+            // shop은 CoffeShop의 "starbucks"이다.
             for (var s : shops) {
                 if (s.equals(shop)) {
                     findshop = s; // findshop에 s를 집어넣는다.
