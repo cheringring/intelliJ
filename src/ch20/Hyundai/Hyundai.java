@@ -36,7 +36,7 @@ public class Hyundai {
        };
     }
 
-
+// inner class
     class Car {
         private String number;
         private Brand brand;
@@ -142,8 +142,12 @@ public class Hyundai {
 
     class Main {
         public void main(String[] args) {
+            // singleton ~~~!~!
             Car bmw= Hyundai.getINSTANCE().createCar(Brand.BMW);
             new Main().carSetFution(bmw);
+            // 메인에 객체를 만들고 거기에 carSetFution에
+            // 위에 Car 객체를 불러온걸 넣는다.
+
 
             Car audi= Hyundai.getINSTANCE().createCar(Brand.AUDI);
             new Main().carSetFution(audi);
