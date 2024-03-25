@@ -1,15 +1,17 @@
 package ShoppingMall;
 
 public class Shop {
+    private static int price;
     String name;
     String addr;
 
-    public Shop(String name){
-        this(name,"null");
+    public Shop(String name) {
+        this(name, "null");
     }
-    public Shop(String name,String addr){
-        this.name= name;
-        this.addr= addr;
+
+    public Shop(String name, String addr) {
+        this.name = name;
+        this.addr = addr;
     }
 
 
@@ -29,10 +31,13 @@ public class Shop {
         this.addr = addr;
     }
 
+}
+
     class Product {
-        private int price;
-        private String name;
-        private String PdCode;
+
+        private static int price;
+        private static String name;
+        private static String PdCode;
 
 
         public Product(String name,int price,String PdCode){
@@ -41,7 +46,7 @@ public class Shop {
             this.PdCode=PdCode;
         }
 
-        public int getPrice() {
+        public static int getPrice() {
             return price;
         }
 
@@ -49,7 +54,7 @@ public class Shop {
             this.price = price;
         }
 
-        public String getName() {
+        public static String getName() {
             return name;
         }
 
@@ -57,7 +62,7 @@ public class Shop {
             this.name = name;
         }
 
-        public String getPdCode() {
+        public static String getPdCode() {
             return PdCode;
         }
 
@@ -65,5 +70,3 @@ public class Shop {
             PdCode = pdCode;
         }
     }
-
-}

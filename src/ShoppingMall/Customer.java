@@ -4,21 +4,23 @@ import java.util.Objects;
 
 
 public class Customer {
-    protected String ID;
-    protected String name;
-
-
+    protected static String ID;
+    protected static String name;
+    protected static String grade;
 
 
     // 비회원일경우.
+
+    public Customer(String ID, String name,String grade){
+        this.ID=ID;
+        this.name=name;
+        this.grade = grade;
+
+    }
     public Customer(String ID){
         this(ID,"null",null);
     }
-    public Customer(String ID,String name,Grade grade){
-        this.ID=ID;
-        this.name=name;
 
-    }
 
     public String getID() {
         return ID;
@@ -36,6 +38,14 @@ public class Customer {
         this.name = name;
     }
 
+    public static String getGrade() {
+        CustomerGrade customerGrade = new CustomerGrade();
+        return customerGrade.grade;
+    }
+
+    public static void setGrade(String grade) {
+        CustomerGrade.grade = grade;
+    }
 
     // id 중복방지.
     @Override
@@ -56,7 +66,7 @@ public class Customer {
         return "고객" +
                 "ID: '" + ID + '\n' +
                 "이름: " + name + '\n' +
-                "등급: " ;
+                "등급: "+ grade ;
     }
 }
 //
