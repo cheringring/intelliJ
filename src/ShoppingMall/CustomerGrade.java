@@ -45,14 +45,14 @@ class CustomerGrade {
     public void RoyalBuyDiscount(Product product) {
         int price = product.getPrice();
         double discount = price - (price * 0.05);
-
-        System.out.println(customer.getID() + ":" + customer.getName() + "\n 구입한 상품: " + product.getName() + "\n 가격(-5%):  " + discount + "원");
+//
+//        System.out.println(customer.getID() + ":" + customer.getName() + "\n 구입한 상품: " + product.getName() + "\n 가격(-5%):  " + discount + "원");
     }
 
     public void RoyalAddBonus(Product product) {
         int price = product.getPrice();
-        double point = price * 0.05;
-        System.out.println(customer.getName() + "의 고객님의 포인트 적립은 " + point + "원 (충성 고객 우대+5%) 입니다.");
+//        double point = price * 0.05;
+//        System.out.println(customer.getName() + "의 고객님의 포인트 적립은 " + point + "원 (충성 고객 우대+5%) 입니다.");
 
     }
 
@@ -60,15 +60,15 @@ class CustomerGrade {
     public void NormalBuyDiscount(Product product) {
         int price = product.getPrice();
         double PdDiscount = price - (price * 0.01);
-
-        System.out.println(customer.getID() + ":" + customer.getName() + "\n 구입한 상품: " + product.getName() + "\n 가격(-1%):  " + PdDiscount + "원");
-    }
+//
+//        System.out.println(customer.getID() + ":" + customer.getName() + "\n 구입한 상품: " + product.getName() + "\n 가격(-1%):  " + PdDiscount + "원");
+ }
 
     public void NormalAddBonus(Product product) {
         int price = product.getPrice();
         double point = price * 0.01;
-
-        System.out.println(customer.getName() + "고객님의 포인트 적립은 " + point + "원 입니다.");
+//
+//        System.out.println(customer.getName() + "고객님의 포인트 적립은 " + point + "원 입니다.");
 
     }
 }

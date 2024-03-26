@@ -40,12 +40,13 @@ public class Customer {
 
     public static String getGrade() {
         CustomerGrade customerGrade = new CustomerGrade();
-        return customerGrade.grade;
+//        return customerGrade.grade;
+        return getGrade();
     }
 
-    public static void setGrade(String grade) {
-        CustomerGrade.grade = grade;
-    }
+//    public static void setGrade(String grade) {
+//        CustomerGrade.grade = grade;
+//    }
 
     // id 중복방지.
     @Override
@@ -76,7 +77,7 @@ public class Customer {
 //    private int bonus;
 //
 //
-//    private Customer customer;
+//
 //    public RoyalCustomer(Customer customer){
 //        this.customer=customer;
 //    }
