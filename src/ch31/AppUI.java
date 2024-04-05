@@ -1,7 +1,6 @@
 package ch31;
 
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 interface IDevice{
     int device (int x, int y);
@@ -10,8 +9,22 @@ public class AppUI {
     public static void main(String[] args) {
         List<String> words = Arrays.asList("aaaggg","bbb","ccff");
 
-                //comparator익명클래스
+
+        //comparator익명클래스
         ///글자 길이 기준으로 오름 차순으로 정렬을 해보세요.
+
+        Collections.sort(words, new Comparator<String>() {
+            @Override
+            public int compare(String o1, String o2) {
+                return Integer.compare(o1.length(),o2.length());
+            }
+        });
+        Collections.sort(words,(s1,s2)-> Integer.compare(s1.length(),s2.length()));
+                for(var s: words) System.out.println(s);
+    }
+
+    public static int resultMethod(Comparator<String> lambda){
+        return lambda.compare("aaaa","bbbb");
 
     }
 }
